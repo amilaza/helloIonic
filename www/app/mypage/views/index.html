@@ -1,0 +1,32 @@
+<div ng-controller="IndexController" ng-init="init();">
+
+  <super-navbar>
+    <super-navbar-title>
+      マイページ
+    </super-navbar-title>
+    <super-navbar-button ng-click='showMenu();' side="right">
+        menu
+    </super-navbar-button>
+  </super-navbar>
+
+
+  <div id="main" class="padding">
+    <div id="container">
+        <button id="facebookButton" class="button button-full button-dark" ng-click='login("facebook");'>facebookでログイン・登録</button>
+
+        <div class="list">
+            <label class="item item-input">
+                <input type="email" placeholder="Email">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password">
+            </label>
+        </div>
+        
+        <button id="normalButton" class="button button-full button-dark" ng-click='login("normal");'>通常ログイン</button>
+
+        <button id="firstButton" class="button button-full button-calm" ng-click='signin();'>はじめての方はこちら</button>
+    </div>
+  </div>
+
+</div>

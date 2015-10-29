@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  window.addEventListener('WebComponentsReady', function() {
+    supersonic.app.splashscreen.hide();
+  });
+  </script>
+  <!-- Cloud resource definition file for Supersonic Data -->
+  <script src="/cloud-resources.js"></script>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title>index</title>
+
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="/components/supersonic/css/supersonic.css" />
+  <link rel="stylesheet" href="/app/common/stylesheets/application.css" />
+  <link rel="stylesheet" href="/mypage/stylesheets/mypage.css">
+  <link rel="import" href="/components/supersonic/components/import.html">
+
+  <script src="http://localhost/cordova.js"></script>
+  <script src="/components/steroids-js/steroids.js"></script>
+  <script src="/components/underscore/underscore-min.js"></script>
+  <script src="/components/angular/angular.js"></script>
+  <script src="/components/angular-touch/angular-touch.js"></script>
+  <script src="/components/angular-underscore-module/angular-underscore-module.js"></script>
+  <script src="/components/supersonic/supersonic.js"></script>
+  <script src="/components/webcomponentsjs/webcomponents.js"></script>
+  <script src="/components/ngCordova/dist/ng-cordova.js"></script>
+
+  
+  <script src="/app/common.js"></script>
+  
+  <script src="/app/mypage.js"></script>
+  
+</head>
+<body ng-app="mypage">
+
+<div ng-controller="IndexController" ng-init="init();">
+
+  <super-navbar>
+    <super-navbar-title>
+      マイページ
+    </super-navbar-title>
+    <super-navbar-button ng-click='showMenu();' side="right">
+        menu
+    </super-navbar-button>
+  </super-navbar>
+
+
+  <div id="main" class="padding">
+    <div id="container">
+        <button id="facebookButton" class="button button-full button-dark" ng-click='login("facebook");'>facebookでログイン・登録</button>
+
+        <div class="list">
+            <label class="item item-input">
+                <input type="email" placeholder="Email">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password">
+            </label>
+        </div>
+        
+        <button id="normalButton" class="button button-full button-dark" ng-click='login("normal");'>通常ログイン</button>
+
+        <button id="firstButton" class="button button-full button-calm" ng-click='signin();'>はじめての方はこちら</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "drawers": {
+    "left": {
+      "id": "offmenu",
+      "location": "http://localhost/app/offmenu/index.html",
+      "showOnAppLoad": false
+    },
+    "options": {
+      "animation": "swingingDoor"
+    }
+  },
+  "tabs": [],
+  "rootView": {
+    "location": "http://localhost/app/home/index.html"
+  },
+  "configuration": {
+    "extra_response_headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type, X-Requested-With, steroidsAppId, steroidsApiKey"
+    }
+  }
+}

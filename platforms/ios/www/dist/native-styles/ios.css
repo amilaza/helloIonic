@@ -1,0 +1,67 @@
+/***********************************************************
+ * These styles apply for native components on iOS.
+ * Read more about native styles at http://docs.appgyver.com
+ ***********************************************************/
+
+freestyle-config {
+  parse-error-destination: console;
+  cache-styles: none;
+  image-cache-count: 100;
+}
+
+
+
+
+navigation-bar {
+  background-color: #66CCCC;
+  color: #ffffff;
+}
+
+/*
+#menu button {
+  color: white;
+  font-style: bold;
+  background-color: #666666;
+  padding: 2px;
+  font-size: 12px;
+  padding: 30px;
+}
+*/
+
+navigation-bar title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+navigation-bar button, navigation-bar back-bar-button {
+  color: #ffffff;
+  font-weight: 300;
+}
+
+tab-bar {
+  background-color: #ffffff;
+  border-top: 1px #d8d8d8 solid;
+}
+
+tab-bar tab-bar-item {
+  color: #b0b1b4;
+  font-family: "Avenir";
+  font-size: 10px;
+}
+
+tab-bar tab-bar-item:selected {
+  color: #1596f7;
+}
+
+tab-bar-item#settings {
+  background-image: url(icons/cog.svg);
+}
+
+tab-bar-item#index {
+  background-image: url(icons/home.svg);
+}
+
+tab-bar-item#internet {
+  background-image: url(icons/search.svg);
+}

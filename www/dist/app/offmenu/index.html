@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  window.addEventListener('WebComponentsReady', function() {
+    supersonic.app.splashscreen.hide();
+  });
+  </script>
+  <!-- Cloud resource definition file for Supersonic Data -->
+  <script src="/cloud-resources.js"></script>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <title>index</title>
+
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="/components/supersonic/css/supersonic.css" />
+  <link rel="stylesheet" href="/app/common/stylesheets/application.css" />
+  <link rel="stylesheet" href="/offmenu/stylesheets/offmenu.css">
+  <link rel="import" href="/components/supersonic/components/import.html">
+
+  <script src="http://localhost/cordova.js"></script>
+  <script src="/components/steroids-js/steroids.js"></script>
+  <script src="/components/underscore/underscore-min.js"></script>
+  <script src="/components/angular/angular.js"></script>
+  <script src="/components/angular-touch/angular-touch.js"></script>
+  <script src="/components/angular-underscore-module/angular-underscore-module.js"></script>
+  <script src="/components/supersonic/supersonic.js"></script>
+  <script src="/components/webcomponentsjs/webcomponents.js"></script>
+  <script src="/components/ngCordova/dist/ng-cordova.js"></script>
+
+  
+  <script src="/app/common.js"></script>
+  
+  <script src="/app/offmenu.js"></script>
+  
+</head>
+<body ng-app="offmenu">
+
+
+<div ng-controller="IndexController">
+
+  <div class="padding">
+
+    <div class="menus">
+        <ul>
+            <li>
+                <span class="icon ion-power"></span>
+                <button class="button button-stable button-clear" ng-click='moveTutorial();'>チュートリアル</button>
+            </li>
+            <li>
+                <span class="icon ion-alert"></span>
+                <button class="button button-stable button-clear" ng-click='moveNews();'>新着一覧</button>
+            </li>
+            <li>
+                <span class="icon super-home"></span>
+                <button class="button button-stable button-clear" ng-click='moveHome();'>ホーム</button>
+            </li>
+            <li>
+                <span class="icon ion-ios-cart"></span>
+                <button class="button button-stable button-clear" ng-click='moveCart();'>カート</button>
+            </li>
+            <li>
+                <span class="icon ion-person"></span>
+                <button class="button button-stable button-clear" ng-click='moveMyPage();'>マイページ</button>
+            </li>
+            <li>
+                <span class="icon ion-android-mail"></span>
+                <button class="button button-stable button-clear" ng-click='moveContact();'>お問い合わせ</button>
+            </li>
+            <li>
+                <span class="icon ion-help-circled"></span>
+                <button class="button button-stable button-clear" ng-click='moveHowToUse();'>ご利用方法</button>
+            </li>
+            <li>
+              <span class = "icon ion-person"></span>
+              <button class="button button-stable button-clear" ng-click = 'moveTestView();'>TestView</button>
+            </li>
+        </ul>
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+#container {
+  width: 84%;
+  margin: 15% auto 0 auto; }
+  #container .list {
+    margin-top: 15%;
+    margin-bottom: 1em; }
+  #container #firstButton {
+    display: inline-box;
+    margin-top: 20%; }
+
+/*
+#facebookButton, #normalButton {
+        display: inline-box;
+    }
+
+    div {
+        margin: 0 auto;
+    }
+*/
+
+/*# sourceMappingURL=mypage.css.map */

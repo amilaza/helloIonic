@@ -1,0 +1,176 @@
+・最短お届け日
+
+
+・ケーキカテゴリー
+公開されている有効なカテゴリー一覧を取得可能にする。
+URL: https://pictcake.jp/api/sp/categories
+
+{
+categories:
+[
+"HappyBirthday",
+"LOVE",
+"Wedding",
+.....
+]
+}
+
+
+
+
+
+・マイページ概要：
+Emailを保持する場合、Emailが変更されてログインできなくなる場合、アプリ内のキャッシュを消去しログインを求めるようにする。
+URL: http://www.pictcake.jp/api/sp/mypage/login/{facebook or normal}
+ex facebook. http://www.pictcake.jp/api/sp/mypage/login/facebook
+
+
+・マイページ（Facebook登録による新規ユーザー）
+Facebookログインの実装概要：
+JavaScript and PHP SDKで使用して出来ている。JavaScriptで認証したトークンをサーバーに渡している。
+Facebookログインが成功し、かつ、データベースにemailがあればログインされる。
+emailがなければアカウントを作成し、その他の情報を入力させる画面に移動させる。
+（マイページの会員登録内容変更画面に飛ぶだけ）
+
+//login or register
+
+URL: https://www.pictcake.jp/api/sp/mypage/facebook
+
+----------------- send smartphone ------------------------------------------
+
+{
+    email: "hoge@hoge.com",
+    lastName: "Apple",
+    firstName: "Swift",
+    access_token: "facebook token",
+    expireDate: "facebook token expireDate"       
+}
+
+----------------server response -----------------------------------------------
+{
+    result: "success or fialur",
+    eccubeToken: "EC-CUBE Session token",
+    status: 0 or 1 or 2 or 3 
+    // 0 is "not logged in", 1 is "already logged in", 2 is "error", 3 is "undefined error."
+}
+
+-----------------------------------------------------------------------------
+
+
+
+// logout
+
+URL: https://www.pictcake.jp/api/sp/mypage/facebook/logout
+
+----------------- send smartphone ------------------------------------------
+
+{
+    email: "hoge@hoge.com"
+}
+
+----------------server response -----------------------------------------------
+{
+    result: "success or fialur",
+    status: 0 or 1 or 2 or 3 
+    // 0 is "success", 1 is "error", 2 is "undefined error."
+}
+
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+・マイページ（通常の新規登録）
+
+URL: https://www.pictcake.jp/api/sp/mypage/normal/register
+
+-------------- normal regist ---------------------------------------------
+smartphone side:
+
+{
+    lastName: "Hyodo",
+    firsrName: "Akira",
+    lastName_kana: "kana",
+    firstName_kana: "kana",
+    zipCode: "1111111",
+    pref: "1 ~ 47",
+    cityName: "市長区村",
+    address: "番地・ビル名",
+    phoneNumber: "123456789",
+    email: "hoge@hoge.com",
+    confirmEmail: "hoge@hoge.com",
+    password: "abc123",
+    confirmPassword: "abc123"
+}
+
+----------------バリデーションルール----------------------------------------
+
+required fields: name (first and last), name (first and last in katakana), address (prefecture, address 01, address 02), telephone, email, password, mail magazine (boolean, for their choice to subscribe to mail magazine)
+    
+フリガナ name MUST be in フリガナ and no kanji
+-------------------------------------------------------------------------
+
+
+-------------- normal login ---------------------------------------------
+smartphone side:
+
+{
+    email: "hoge@hoge.com",
+    password: "password"
+}
+
+
+----------------server response -----------------------------------------------
+{
+    result: "success or fialur",
+    eccubeToken: "EC-CUBE Session token",
+    status: 0 or 1 or 2 or 3 
+    // 0 is "not logged in", 1 is "already logged in", 2 is "error", 3 is "undefined error."
+}
+
+-----------------------------------------------------------------------------
+
+
+
+
+
+・決済
+決済ページだけWebViewで行う。
+クレジット、
+振り込み、
+コンビニ後払い　ネットプロテクションズ（コンビニ後払い） 
+
+
+
+
+
+・コレクション一覧（カテゴリー情報を付加して）
+http://www.pictcake.jp/iphone/products
+項目：
+「名前、サブタイトル、味、価格、ケーキイメージ写真、ケーキに載せる写真」
+
+collections: {
+name: "HappyBirthday",
+
+}
+
+
+
+・カート情報（"http://www.pictcake.jp/iphone/cart/）
+画像合成してできたケーキと皿、スプーン、ロウソクなどのオプションなどすべてカートに含まれる。
+
+カートの情報を確認。
+カートの中身に表示があれば表示する。
+カテゴリーでのソートなどで並び替えが可能にする。
+項目：
+「商品画像、商品名、価格、個数」＋「合計金額」
+
+
+
+
+・告知情報の表示
+雪の影響で配達に遅延が発生しています情報の表示
+
+

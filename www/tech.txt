@@ -1,0 +1,7 @@
+・ Facebookログインの挙動(phonegap-facebook-plugin, cordovaFacebbok)
+
+はじめにログインメソッドを呼び出さないと$cordovaFacebook.apiメソッドをコールしても何も起きない。
+
+以降、getLoginStatusメソッド等でログイン済みであれば正しく分岐される。
+そして、そこで初めてapiメソッドがコールできる。apiメソッドでパーミッションを再度指定すると、またFAcebookアプリに遷移
+してしまう。パーミッションに変更がなければ「null」を指定しておく。

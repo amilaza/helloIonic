@@ -1,0 +1,13 @@
+{
+  "name": "pictcake",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.3.x",
+    "supersonic": "1.x",
+    "ngCordova": "*",
+    "angular-touch": "*",
+    "underscore": "*",
+    "angular-underscore-module": "*"
+  }
+}

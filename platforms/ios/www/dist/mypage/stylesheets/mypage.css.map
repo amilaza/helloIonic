@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,UAAW;EACP,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,eAAe;EAEvB,gBAAM;IACF,UAAU,EAAE,GAAG;IACf,aAAa,EAAE,GAAG;EAGtB,uBAAa;IACT,OAAO,EAAE,UAAU;IACnB,UAAU,EAAE,GAAG",
+"sources": ["../../../app/mypage/stylesheets/mypage.scss"],
+"names": [],
+"file": "mypage.css"
+}
